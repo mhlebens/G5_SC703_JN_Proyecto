@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1070955323554",
+    "project_id": "playtime-manager",
+    "storage_bucket": "playtime-manager.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070955323554:android:3ad6e9963a48c49d0237fb",
+        "android_client_info": {
+          "package_name": "com.mycompany.proyectofinal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrFmEWcdM6rxz-kflwN5APyrih1gtzE1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070955323554:android:a7cfe419ab7a62e00237fb",
+        "android_client_info": {
+          "package_name": "com.mycompany.proyectofinal.playtime"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrFmEWcdM6rxz-kflwN5APyrih1gtzE1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

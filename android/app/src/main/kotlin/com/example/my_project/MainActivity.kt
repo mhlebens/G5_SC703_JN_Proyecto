@@ -1,4 +1,4 @@
-package com.mycompany.proyectofinal
+package com.mycompany.proyectofinal.playtime
 
 import io.flutter.embedding.android.FlutterActivity
 

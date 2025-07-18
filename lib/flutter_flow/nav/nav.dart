@@ -33,12 +33,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) => SignupPageWidget(),
+      errorBuilder: (context, state) => HomePageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => SignupPageWidget(),
+          builder: (context, _) => HomePageWidget(),
         ),
         FFRoute(
           name: SignupPageWidget.routeName,
@@ -49,6 +49,31 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: HomePageWidget.routeName,
           path: HomePageWidget.routePath,
           builder: (context, params) => HomePageWidget(),
+        ),
+        FFRoute(
+          name: ReservaCanchaPageWidget.routeName,
+          path: ReservaCanchaPageWidget.routePath,
+          builder: (context, params) => ReservaCanchaPageWidget(),
+        ),
+        FFRoute(
+          name: SolicitarImplementosPageWidget.routeName,
+          path: SolicitarImplementosPageWidget.routePath,
+          builder: (context, params) => SolicitarImplementosPageWidget(),
+        ),
+        FFRoute(
+          name: SignInWidget.routeName,
+          path: SignInWidget.routePath,
+          builder: (context, params) => SignInWidget(),
+        ),
+        FFRoute(
+          name: ResetPasswordWidget.routeName,
+          path: ResetPasswordWidget.routePath,
+          builder: (context, params) => ResetPasswordWidget(),
+        ),
+        FFRoute(
+          name: ReservasRealiWidget.routeName,
+          path: ReservasRealiWidget.routePath,
+          builder: (context, params) => ReservasRealiWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -120,6 +145,7 @@ class FFParameters {
     String paramName,
     ParamType type, {
     bool isList = false,
+    List<String>? collectionNamePath,
   }) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -137,6 +163,7 @@ class FFParameters {
       param,
       type,
       isList,
+      collectionNamePath: collectionNamePath,
     );
   }
 }
