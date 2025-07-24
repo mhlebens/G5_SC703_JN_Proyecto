@@ -76,14 +76,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? SignInWidget() : ResetPasswordWidget(),
+          appStateNotifier.loggedIn ? SignInWidget() : HomePageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.loggedIn
-              ? SignInWidget()
-              : ResetPasswordWidget(),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? SignInWidget() : HomePageWidget(),
         ),
         FFRoute(
           name: SignupPageWidget.routeName,
@@ -289,7 +288,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/resetPassword';
+            return '/homePage';
           }
           return null;
         },

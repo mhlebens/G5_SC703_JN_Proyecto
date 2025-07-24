@@ -70,7 +70,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
             alignment: AlignmentDirectional(0.0, 0.0),
             child: Text(
               FFLocalizations.of(context).getText(
-                'l6ns4b0t' /* Sign up */,
+                'l6ns4b0t' /* Registrarse */,
               ),
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -107,7 +107,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                   children: [
                     Text(
                       FFLocalizations.of(context).getText(
-                        'dfd1xovg' /* Email Address: */,
+                        'dfd1xovg' /* Correo Electrónico: */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             font: GoogleFonts.inter(
@@ -155,7 +155,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                       .fontStyle,
                                 ),
                             hintText: FFLocalizations.of(context).getText(
-                              'spgedsmy' /* Email Address */,
+                              'spgedsmy' /* Correo Electrónico */,
                             ),
                             hintStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
@@ -242,7 +242,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                   children: [
                     Text(
                       FFLocalizations.of(context).getText(
-                        'qosu3v3v' /* Nickname: */,
+                        'qosu3v3v' /* Apodo: */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             font: GoogleFonts.inter(
@@ -290,7 +290,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                       .fontStyle,
                                 ),
                             hintText: FFLocalizations.of(context).getText(
-                              'kd7q5mbl' /* Nickname */,
+                              'kd7q5mbl' /* Apodo */,
                             ),
                             hintStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
@@ -377,7 +377,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                   children: [
                     Text(
                       FFLocalizations.of(context).getText(
-                        'oe5px983' /* Birthday: */,
+                        'oe5px983' /* Fecha Nacimiento: */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             font: GoogleFonts.inter(
@@ -512,7 +512,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                   children: [
                     Text(
                       FFLocalizations.of(context).getText(
-                        'fehml6yb' /* Password: */,
+                        'fehml6yb' /* Contraseña: */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             font: GoogleFonts.inter(
@@ -560,7 +560,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                       .fontStyle,
                                 ),
                             hintText: FFLocalizations.of(context).getText(
-                              'su9rl1op' /* Password */,
+                              'su9rl1op' /* Contraseña */,
                             ),
                             hintStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
@@ -647,7 +647,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                   children: [
                     Text(
                       FFLocalizations.of(context).getText(
-                        'u8xysqrh' /* Confirm Password: */,
+                        'u8xysqrh' /* Confirmar Contraseña: */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             font: GoogleFonts.inter(
@@ -695,7 +695,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                       .fontStyle,
                                 ),
                             hintText: FFLocalizations.of(context).getText(
-                              '8ebn7s1x' /* Confirm Password */,
+                              '8nhau7xp' /* Confirmar Contraseña */,
                             ),
                             hintStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
@@ -825,6 +825,10 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                             ),
                           }, usersRecordReference);
                           if (_model.result?.reference != null) {
+                            _model.apiResult = await CreateJWTCall.call(
+                              nickname: _model.result?.nickname,
+                            );
+
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 content: Text(
@@ -839,9 +843,8 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                     FlutterFlowTheme.of(context).secondary,
                               ),
                             );
-                            _model.apiResult = await CreateJWTCall.call(
-                              nickname: _model.result?.nickname,
-                            );
+
+                            context.goNamed(HomePageWidget.routeName);
                           } else {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
@@ -879,7 +882,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                         safeSetState(() {});
                       },
                       text: FFLocalizations.of(context).getText(
-                        'a8s9ap5s' /* Sign Up */,
+                        'a8s9ap5s' /* Registrar */,
                       ),
                       options: FFButtonOptions(
                         height: 40.0,
@@ -920,7 +923,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                 children: [
                   Text(
                     FFLocalizations.of(context).getText(
-                      'nveey1ei' /* Do you already have an account... */,
+                      'nveey1ei' /* ¿Ya tienes una cuenta? */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           font: GoogleFonts.inter(
@@ -944,7 +947,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                       context.pushNamed(SignInWidget.routeName);
                     },
                     text: FFLocalizations.of(context).getText(
-                      'r6rnbe99' /* Sign In */,
+                      'r6rnbe99' /* Iniciar Sesión */,
                     ),
                     options: FFButtonOptions(
                       height: 40.0,

@@ -147,75 +147,75 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // SignupPage
   {
     'dfd1xovg': {
-      'es': 'Email Address:',
-      'en': '',
+      'es': 'Correo Electrónico:',
+      'en': 'Email Address:',
     },
     'spgedsmy': {
-      'es': 'Email Address',
-      'en': '',
+      'es': 'Correo Electrónico',
+      'en': 'Email Address',
     },
     'qosu3v3v': {
-      'es': 'Nickname:',
-      'en': '',
+      'es': 'Apodo:',
+      'en': 'Nickname:',
     },
     'kd7q5mbl': {
-      'es': 'Nickname',
-      'en': '',
+      'es': 'Apodo',
+      'en': 'Nickname',
     },
     'oe5px983': {
-      'es': 'Birthday:',
-      'en': '',
+      'es': 'Fecha Nacimiento:',
+      'en': 'Birthday:',
     },
     'n2wx762i': {
       'es': 'mm/dd/yyyy',
-      'en': '',
+      'en': 'mm/dd/yyyy',
     },
     'fehml6yb': {
-      'es': 'Password:',
-      'en': '',
+      'es': 'Contraseña:',
+      'en': 'Password:',
     },
     'su9rl1op': {
-      'es': 'Password',
-      'en': '',
+      'es': 'Contraseña',
+      'en': 'Password',
     },
     'u8xysqrh': {
-      'es': 'Confirm Password:',
-      'en': '',
+      'es': 'Confirmar Contraseña:',
+      'en': 'Confirm Password:',
     },
-    '8ebn7s1x': {
-      'es': 'Confirm Password',
+    '8nhau7xp': {
+      'es': 'Confirmar Contraseña',
       'en': '',
     },
     'a8s9ap5s': {
-      'es': 'Sign Up',
-      'en': '',
+      'es': 'Registrar',
+      'en': 'Sign Up',
     },
     'nveey1ei': {
-      'es': 'Do you already have an account?',
-      'en': '',
+      'es': '¿Ya tienes una cuenta?',
+      'en': 'Do you already have an account?',
     },
     'r6rnbe99': {
-      'es': 'Sign In',
-      'en': '',
+      'es': 'Iniciar Sesión',
+      'en': 'Sign In',
     },
     'l6ns4b0t': {
-      'es': 'Sign up',
-      'en': '',
+      'es': 'Registrarse',
+      'en': 'Sign Up',
     },
     'bqnsaige': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // HomePage
   {
     '401bi2um': {
       'es': 'Page Title',
-      'en': '',
+      'en': 'Page Title',
     },
     'jfztf6ry': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // ReservaCanchaPage
@@ -226,67 +226,67 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '0vjcmjce': {
       'es': 'Select...',
-      'en': '',
+      'en': 'Select...',
     },
     'jxm2w6bm': {
       'es': 'Search...',
-      'en': '',
+      'en': 'Search...',
     },
     'h3oemlo0': {
       'es': '08:00 AM',
-      'en': '',
+      'en': '08:00 AM',
     },
     'aimph3to': {
       'es': '09:00 AM',
-      'en': '',
+      'en': '09:00 AM',
     },
     'ppwspc54': {
       'es': '10:00 AM',
-      'en': '',
+      'en': '10:00 AM',
     },
     'a3o02afl': {
       'es': 'Select...',
-      'en': '',
+      'en': 'Select...',
     },
     '4q2uy5ex': {
       'es': 'Search...',
-      'en': '',
+      'en': 'Search...',
     },
     'h524yv8o': {
       'es': 'Cancha de Fulbol 1',
-      'en': '',
+      'en': 'Soccer Field 1',
     },
     'xx3cuxdt': {
       'es': 'Cancha de Fulbol 2',
-      'en': '',
+      'en': 'Soccer Field 2',
     },
     'pl8op1nu': {
       'es': 'Cancha de Basketball 3',
-      'en': '',
+      'en': 'Basketball Court 3',
     },
     'u3i11175': {
       'es': 'Selecciona implementos deportivos',
-      'en': '',
+      'en': 'Select sports equipment',
     },
     '5jj5tti7': {
       'es': 'Balón de fútbol',
-      'en': '',
+      'en': 'Soccer ball',
     },
     'z86m6i4i': {
       'es': 'Balón de basquetball\n',
-      'en': '',
+      'en': 'Basketball',
     },
     'pf3brk9r': {
       'es': 'Reservar',
-      'en': '',
+      'en': 'Reserve',
     },
     '8l9fedx8': {
       'es': 'Reserva de Canchas',
-      'en': 'Recover Password',
+      'en': 'Court Reservation',
     },
     'dqs42ah2': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // SignIn
@@ -297,7 +297,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ueeyayiu': {
       'es': 'Correo Electrónico',
-      'en': '',
+      'en': 'Email',
     },
     '7zfh4e4o': {
       'es': 'Contraseña',
@@ -309,19 +309,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '6t144ncf': {
       'es': 'Iniciar Sesión',
-      'en': 'SignIn',
+      'en': 'Login',
     },
     'nuztd9am': {
       'es': 'No tienes cuenta todavia?',
-      'en': 'Don\'t you have an account yet?',
+      'en': 'Don\'t have an account yet?',
     },
     'pdjw48cq': {
       'es': 'Registrarte',
-      'en': 'Signup',
+      'en': 'Register',
     },
     'gea4whqa': {
       'es': 'Olvidaste la contraseña?',
-      'en': 'Do you forget the password?',
+      'en': 'Forgot your password?',
     },
     'mtw8uf0y': {
       'es': 'Nueva Contraseña',
@@ -329,11 +329,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'z6cfljwf': {
       'es': 'Iniciar sesión',
-      'en': 'Recover Password',
+      'en': 'Login',
     },
     'vjxa2za5': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // ResetPassword
@@ -348,7 +348,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'tbw6846f': {
       'es': 'Enviar correo de recuperación',
-      'en': 'Send recovery email ',
+      'en': 'Send recovery email',
     },
     'ymky6iep': {
       'es': 'Recuperar Contraseña',
@@ -356,29 +356,29 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'iqu6hoyz': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // ReservasReali
   {
     'w67neuji': {
       'es': 'Reservas Realizadas',
-      'en': 'Recover Password',
+      'en': 'Reservations Made',
     },
     '4ddaxpxm': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // MisReservasPage
   {
     'w0ulhm7d': {
       'es': 'Mis Reservas',
-      'en': 'Recover Password',
+      'en': 'Court Reservation',
     },
     'ss1ptnxe': {
       'es': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // Miscellaneous
