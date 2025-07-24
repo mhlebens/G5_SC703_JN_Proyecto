@@ -8,8 +8,6 @@ import 'package:flutter/material.dart';
 // Begin custom action code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
-import '/backend/schema/structs/index.dart';
-
 import 'package:encrypt/encrypt.dart' as enc;
 
 Future<String?> encryptText(String plainText) async {
