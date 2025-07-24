@@ -58,7 +58,7 @@ class _SignInWidgetState extends State<SignInWidget> {
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              'r31x266o' /* Iniciar sesión */,
+              'z6cfljwf' /* Iniciar sesión */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   font: GoogleFonts.interTight(

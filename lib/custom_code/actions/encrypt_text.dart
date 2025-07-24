@@ -8,9 +8,13 @@ import 'package:flutter/material.dart';
 // Begin custom action code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
+import '/backend/schema/structs/index.dart';
+
+import 'package:encrypt/encrypt.dart' as enc;
+
 Future<String?> encryptText(String plainText) async {
   // Add your function code here!
-  // final key = enc.Key.fromUtf8('quinquagintaquadringentilliardth');
+  final key = enc.Key.fromUtf8('quinquagintaquadringentilliardth');
   final iv = enc.IV.fromUtf8('d1oTca3yGwu2XX0W');
 
   final encrypter =

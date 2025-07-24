@@ -48,7 +48,7 @@ class _ReservasRealiWidgetState extends State<ReservasRealiWidget> {
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              '57qki5e2' /* Reservas Realizadas */,
+              'w67neuji' /* Reservas Realizadas */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   font: GoogleFonts.interTight(

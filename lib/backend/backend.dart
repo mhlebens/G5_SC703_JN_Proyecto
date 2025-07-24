@@ -3,9 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'schema/util/firestore_util.dart';
 
 import 'schema/users_record.dart';
-import 'schema/reserva_record.dart';
 import 'schema/torneos_record.dart';
-import 'schema/implementos_record.dart';
 import 'schema/canchas_record.dart';
 import 'schema/reservas_cancha_record.dart';
 
@@ -17,9 +15,7 @@ export 'schema/util/firestore_util.dart';
 export 'schema/util/schema_util.dart';
 
 export 'schema/users_record.dart';
-export 'schema/reserva_record.dart';
 export 'schema/torneos_record.dart';
-export 'schema/implementos_record.dart';
 export 'schema/canchas_record.dart';
 export 'schema/reservas_cancha_record.dart';
 
@@ -60,43 +56,6 @@ Future<List<UsersRecord>> queryUsersRecordOnce({
       singleRecord: singleRecord,
     );
 
-/// Functions to query ReservaRecords (as a Stream and as a Future).
-Future<int> queryReservaRecordCount({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-}) =>
-    queryCollectionCount(
-      ReservaRecord.collection,
-      queryBuilder: queryBuilder,
-      limit: limit,
-    );
-
-Stream<List<ReservaRecord>> queryReservaRecord({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollection(
-      ReservaRecord.collection,
-      ReservaRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-Future<List<ReservaRecord>> queryReservaRecordOnce({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollectionOnce(
-      ReservaRecord.collection,
-      ReservaRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
 /// Functions to query TorneosRecords (as a Stream and as a Future).
 Future<int> queryTorneosRecordCount({
   Query Function(Query)? queryBuilder,
@@ -129,43 +88,6 @@ Future<List<TorneosRecord>> queryTorneosRecordOnce({
     queryCollectionOnce(
       TorneosRecord.collection,
       TorneosRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-/// Functions to query ImplementosRecords (as a Stream and as a Future).
-Future<int> queryImplementosRecordCount({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-}) =>
-    queryCollectionCount(
-      ImplementosRecord.collection,
-      queryBuilder: queryBuilder,
-      limit: limit,
-    );
-
-Stream<List<ImplementosRecord>> queryImplementosRecord({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollection(
-      ImplementosRecord.collection,
-      ImplementosRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-Future<List<ImplementosRecord>> queryImplementosRecordOnce({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollectionOnce(
-      ImplementosRecord.collection,
-      ImplementosRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,

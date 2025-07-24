@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_calendar.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
@@ -162,120 +163,287 @@ class _ReservaCanchaPageWidgetState extends State<ReservaCanchaPageWidget> {
                     ),
                 locale: FFLocalizations.of(context).languageCode,
               ),
-              FlutterFlowDropDown<String>(
-                controller: _model.horaValueController ??=
-                    FormFieldController<String>(null),
-                options: [
-                  FFLocalizations.of(context).getText(
-                    'h3oemlo0' /* Option 1 */,
+              Align(
+                alignment: AlignmentDirectional(0.0, 50.0),
+                child: FlutterFlowDropDown<String>(
+                  controller: _model.horaValueController ??=
+                      FormFieldController<String>(
+                    _model.horaValue ??= '',
                   ),
-                  FFLocalizations.of(context).getText(
-                    'aimph3to' /* Option 2 */,
-                  ),
-                  FFLocalizations.of(context).getText(
-                    'ppwspc54' /* Option 3 */,
-                  )
-                ],
-                onChanged: (val) => safeSetState(() => _model.horaValue = val),
-                width: 200.0,
-                height: 40.0,
-                textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
+                  options:
+                      List<String>.from(['08:00 AM', '09:00 AM', '10:00 AM']),
+                  optionLabels: [
+                    FFLocalizations.of(context).getText(
+                      'h3oemlo0' /* 08:00 AM */,
+                    ),
+                    FFLocalizations.of(context).getText(
+                      'aimph3to' /* 09:00 AM */,
+                    ),
+                    FFLocalizations.of(context).getText(
+                      'ppwspc54' /* 10:00 AM */,
+                    )
+                  ],
+                  onChanged: (val) =>
+                      safeSetState(() => _model.horaValue = val),
+                  width: 200.0,
+                  height: 40.0,
+                  textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        letterSpacing: 0.0,
                         fontWeight:
                             FlutterFlowTheme.of(context).bodyMedium.fontWeight,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                      letterSpacing: 0.0,
-                      fontWeight:
-                          FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-                hintText: FFLocalizations.of(context).getText(
-                  '0vjcmjce' /* Select... */,
+                  hintText: FFLocalizations.of(context).getText(
+                    '0vjcmjce' /* Select... */,
+                  ),
+                  icon: Icon(
+                    Icons.access_time,
+                    color: FlutterFlowTheme.of(context).secondaryText,
+                    size: 24.0,
+                  ),
+                  fillColor: FlutterFlowTheme.of(context).secondaryBackground,
+                  elevation: 2.0,
+                  borderColor: Colors.transparent,
+                  borderWidth: 0.0,
+                  borderRadius: 8.0,
+                  margin: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                  hidesUnderline: true,
+                  isOverButton: false,
+                  isSearchable: false,
+                  isMultiSelect: false,
                 ),
-                icon: Icon(
-                  Icons.keyboard_arrow_down_rounded,
-                  color: FlutterFlowTheme.of(context).secondaryText,
-                  size: 24.0,
-                ),
-                fillColor: FlutterFlowTheme.of(context).secondaryBackground,
-                elevation: 2.0,
-                borderColor: Colors.transparent,
-                borderWidth: 0.0,
-                borderRadius: 8.0,
-                margin: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
-                hidesUnderline: true,
-                isOverButton: false,
-                isSearchable: false,
-                isMultiSelect: false,
               ),
-              FlutterFlowDropDown<String>(
-                controller: _model.canchaValueController ??=
-                    FormFieldController<String>(null),
-                options: [
-                  FFLocalizations.of(context).getText(
-                    'h524yv8o' /* Option 1 */,
+              Align(
+                alignment: AlignmentDirectional(0.0, 0.0),
+                child: FlutterFlowDropDown<String>(
+                  controller: _model.canchaValueController ??=
+                      FormFieldController<String>(
+                    _model.canchaValue ??= '',
                   ),
-                  FFLocalizations.of(context).getText(
-                    'xx3cuxdt' /* Option 2 */,
-                  ),
-                  FFLocalizations.of(context).getText(
-                    'pl8op1nu' /* Option 3 */,
-                  )
-                ],
-                onChanged: (val) =>
-                    safeSetState(() => _model.canchaValue = val),
-                width: 200.0,
-                height: 40.0,
-                textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
+                  options: List<String>.from([
+                    'Cancha de Fulbol 1',
+                    'Cancha de Fulbol 2',
+                    'Cancha de  Basketball 3'
+                  ]),
+                  optionLabels: [
+                    FFLocalizations.of(context).getText(
+                      'h524yv8o' /* Cancha de Fulbol 1 */,
+                    ),
+                    FFLocalizations.of(context).getText(
+                      'xx3cuxdt' /* Cancha de Fulbol 2 */,
+                    ),
+                    FFLocalizations.of(context).getText(
+                      'pl8op1nu' /* Cancha de Basketball 3 */,
+                    )
+                  ],
+                  onChanged: (val) =>
+                      safeSetState(() => _model.canchaValue = val),
+                  width: 200.0,
+                  height: 40.0,
+                  textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        letterSpacing: 0.0,
                         fontWeight:
                             FlutterFlowTheme.of(context).bodyMedium.fontWeight,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                      letterSpacing: 0.0,
-                      fontWeight:
-                          FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                    ),
-                hintText: FFLocalizations.of(context).getText(
-                  'a3o02afl' /* Select... */,
+                  hintText: FFLocalizations.of(context).getText(
+                    'a3o02afl' /* Select... */,
+                  ),
+                  icon: Icon(
+                    Icons.sports_basketball_sharp,
+                    color: FlutterFlowTheme.of(context).secondaryText,
+                    size: 24.0,
+                  ),
+                  fillColor: FlutterFlowTheme.of(context).secondaryBackground,
+                  elevation: 2.0,
+                  borderColor: Colors.transparent,
+                  borderWidth: 0.0,
+                  borderRadius: 8.0,
+                  margin: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                  hidesUnderline: true,
+                  isOverButton: false,
+                  isSearchable: false,
+                  isMultiSelect: false,
                 ),
-                icon: Icon(
-                  Icons.keyboard_arrow_down_rounded,
-                  color: FlutterFlowTheme.of(context).secondaryText,
-                  size: 24.0,
+              ),
+              Align(
+                alignment: AlignmentDirectional(0.0, 0.0),
+                child: Text(
+                  FFLocalizations.of(context).getText(
+                    'u3i11175' /* Selecciona implementos deporti... */,
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.inter(
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        letterSpacing: 0.0,
+                        fontWeight:
+                            FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
                 ),
-                fillColor: FlutterFlowTheme.of(context).secondaryBackground,
-                elevation: 2.0,
-                borderColor: Colors.transparent,
-                borderWidth: 0.0,
-                borderRadius: 8.0,
-                margin: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
-                hidesUnderline: true,
-                isOverButton: false,
-                isSearchable: false,
-                isMultiSelect: false,
+              ),
+              Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        FFLocalizations.of(context).getText(
+                          '5jj5tti7' /* Balón de fútbol */,
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              font: GoogleFonts.inter(
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .fontStyle,
+                              ),
+                              letterSpacing: 0.0,
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .fontStyle,
+                            ),
+                      ),
+                      Theme(
+                        data: ThemeData(
+                          checkboxTheme: CheckboxThemeData(
+                            visualDensity: VisualDensity.compact,
+                            materialTapTargetSize:
+                                MaterialTapTargetSize.shrinkWrap,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4.0),
+                            ),
+                          ),
+                          unselectedWidgetColor:
+                              FlutterFlowTheme.of(context).alternate,
+                        ),
+                        child: Checkbox(
+                          value: _model.futbolCheckboxValue ??= true,
+                          onChanged: (newValue) async {
+                            safeSetState(
+                                () => _model.futbolCheckboxValue = newValue!);
+                          },
+                          side: (FlutterFlowTheme.of(context).alternate != null)
+                              ? BorderSide(
+                                  width: 2,
+                                  color:
+                                      FlutterFlowTheme.of(context).alternate,
+                                )
+                              : null,
+                          activeColor: FlutterFlowTheme.of(context).primary,
+                          checkColor: FlutterFlowTheme.of(context).info,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        FFLocalizations.of(context).getText(
+                          'z86m6i4i' /* Balón de basquetball
+ */
+                          ,
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              font: GoogleFonts.inter(
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .fontStyle,
+                              ),
+                              letterSpacing: 0.0,
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .fontStyle,
+                            ),
+                      ),
+                      Theme(
+                        data: ThemeData(
+                          checkboxTheme: CheckboxThemeData(
+                            visualDensity: VisualDensity.compact,
+                            materialTapTargetSize:
+                                MaterialTapTargetSize.shrinkWrap,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4.0),
+                            ),
+                          ),
+                          unselectedWidgetColor:
+                              FlutterFlowTheme.of(context).alternate,
+                        ),
+                        child: Checkbox(
+                          value: _model.basketCheckboxValue ??= true,
+                          onChanged: (newValue) async {
+                            safeSetState(
+                                () => _model.basketCheckboxValue = newValue!);
+                          },
+                          side: (FlutterFlowTheme.of(context).alternate != null)
+                              ? BorderSide(
+                                  width: 2,
+                                  color:
+                                      FlutterFlowTheme.of(context).alternate,
+                                )
+                              : null,
+                          activeColor: FlutterFlowTheme.of(context).primary,
+                          checkColor: FlutterFlowTheme.of(context).info,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
               FFButtonWidget(
                 onPressed: () async {
                   await ReservasCanchaRecord.collection
-                      .doc()
+                      .doc('')
                       .set(createReservasCanchaRecordData(
-                        usuarioId: '\"usuario_prueba\"',
+                        usuarioId: currentUserUid,
                         fecha: _model.calendarSelectedDay?.start,
                         hora: _model.horaValue,
                         cancha: _model.canchaValue,
                         estado: 'pendiente',
+                        balonFutbol: _model.futbolCheckboxValue,
+                        balonBasket: _model.basketCheckboxValue,
                       ));
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text(
-                        '¡Reserva realizada con éxito!',
+                        'Se  reservo com exito',
                         style: TextStyle(
                           color: FlutterFlowTheme.of(context).primaryText,
                         ),

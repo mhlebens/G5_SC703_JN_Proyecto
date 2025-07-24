@@ -40,12 +40,24 @@ class ReservasCanchaRecord extends FirestoreRecord {
   String get estado => _estado ?? '';
   bool hasEstado() => _estado != null;
 
+  // "balonFutbol" field.
+  bool? _balonFutbol;
+  bool get balonFutbol => _balonFutbol ?? false;
+  bool hasBalonFutbol() => _balonFutbol != null;
+
+  // "balonBasket" field.
+  bool? _balonBasket;
+  bool get balonBasket => _balonBasket ?? false;
+  bool hasBalonBasket() => _balonBasket != null;
+
   void _initializeFields() {
     _usuarioId = snapshotData['usuario_id'] as String?;
     _fecha = snapshotData['fecha'] as DateTime?;
     _hora = snapshotData['hora'] as String?;
     _cancha = snapshotData['cancha'] as String?;
     _estado = snapshotData['estado'] as String?;
+    _balonFutbol = snapshotData['balonFutbol'] as bool?;
+    _balonBasket = snapshotData['balonBasket'] as bool?;
   }
 
   static CollectionReference get collection =>
@@ -88,6 +100,8 @@ Map<String, dynamic> createReservasCanchaRecordData({
   String? hora,
   String? cancha,
   String? estado,
+  bool? balonFutbol,
+  bool? balonBasket,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -96,6 +110,8 @@ Map<String, dynamic> createReservasCanchaRecordData({
       'hora': hora,
       'cancha': cancha,
       'estado': estado,
+      'balonFutbol': balonFutbol,
+      'balonBasket': balonBasket,
     }.withoutNulls,
   );
 
@@ -112,12 +128,21 @@ class ReservasCanchaRecordDocumentEquality
         e1?.fecha == e2?.fecha &&
         e1?.hora == e2?.hora &&
         e1?.cancha == e2?.cancha &&
-        e1?.estado == e2?.estado;
+        e1?.estado == e2?.estado &&
+        e1?.balonFutbol == e2?.balonFutbol &&
+        e1?.balonBasket == e2?.balonBasket;
   }
 
   @override
-  int hash(ReservasCanchaRecord? e) => const ListEquality()
-      .hash([e?.usuarioId, e?.fecha, e?.hora, e?.cancha, e?.estado]);
+  int hash(ReservasCanchaRecord? e) => const ListEquality().hash([
+        e?.usuarioId,
+        e?.fecha,
+        e?.hora,
+        e?.cancha,
+        e?.estado,
+        e?.balonFutbol,
+        e?.balonBasket
+      ]);
 
   @override
   bool isValidKey(Object? o) => o is ReservasCanchaRecord;

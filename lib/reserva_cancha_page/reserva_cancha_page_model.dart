@@ -15,6 +15,10 @@ class ReservaCanchaPageModel extends FlutterFlowModel<ReservaCanchaPageWidget> {
   // State field(s) for Cancha widget.
   String? canchaValue;
   FormFieldController<String>? canchaValueController;
+  // State field(s) for FutbolCheckbox widget.
+  bool? futbolCheckboxValue;
+  // State field(s) for BasketCheckbox widget.
+  bool? basketCheckboxValue;
 
   @override
   void initState(BuildContext context) {

@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -52,7 +53,7 @@ class _ResetPasswordWidgetState extends State<ResetPasswordWidget> {
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              'u8r9u9qo' /* Recuperar Contraseña */,
+              'ymky6iep' /* Recuperar Contraseña */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   font: GoogleFonts.interTight(
@@ -217,8 +218,34 @@ class _ResetPasswordWidgetState extends State<ResetPasswordWidget> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     FFButtonWidget(
-                      onPressed: () {
-                        print('SendEmailButton pressed ...');
+                      onPressed: () async {
+                        if (_model.emailInputTextController.text.isEmpty) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                'Email required!',
+                              ),
+                            ),
+                          );
+                          return;
+                        }
+                        await authManager.resetPassword(
+                          email: _model.emailInputTextController.text,
+                          context: context,
+                        );
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(
+                              'Correo enviado!',
+                              style: TextStyle(
+                                color: FlutterFlowTheme.of(context).primaryText,
+                              ),
+                            ),
+                            duration: Duration(milliseconds: 4000),
+                            backgroundColor:
+                                FlutterFlowTheme.of(context).success,
+                          ),
+                        );
                       },
                       text: FFLocalizations.of(context).getText(
                         'tbw6846f' /* Enviar correo de recuperación */,

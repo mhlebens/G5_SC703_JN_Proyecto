@@ -220,6 +220,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // ReservaCanchaPage
   {
+    'wtcfuaqh': {
+      'es': '',
+      'en': '',
+    },
     '0vjcmjce': {
       'es': 'Select...',
       'en': '',
@@ -229,15 +233,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'h3oemlo0': {
-      'es': 'Option 1',
+      'es': '08:00 AM',
       'en': '',
     },
     'aimph3to': {
-      'es': 'Option 2',
+      'es': '09:00 AM',
       'en': '',
     },
     'ppwspc54': {
-      'es': 'Option 3',
+      'es': '10:00 AM',
       'en': '',
     },
     'a3o02afl': {
@@ -249,15 +253,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'h524yv8o': {
-      'es': 'Option 1',
+      'es': 'Cancha de Fulbol 1',
       'en': '',
     },
     'xx3cuxdt': {
-      'es': 'Option 2',
+      'es': 'Cancha de Fulbol 2',
       'en': '',
     },
     'pl8op1nu': {
-      'es': 'Option 3',
+      'es': 'Cancha de Basketball 3',
+      'en': '',
+    },
+    'u3i11175': {
+      'es': 'Selecciona implementos deportivos',
+      'en': '',
+    },
+    '5jj5tti7': {
+      'es': 'Balón de fútbol',
+      'en': '',
+    },
+    'z86m6i4i': {
+      'es': 'Balón de basquetball\n',
       'en': '',
     },
     'pf3brk9r': {
@@ -269,17 +285,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Recover Password',
     },
     'dqs42ah2': {
-      'es': 'Home',
-      'en': '',
-    },
-  },
-  // SolicitarImplementosPage
-  {
-    'lgzo22y9': {
-      'es': 'Solicitar Implementos',
-      'en': 'Recover Password',
-    },
-    'ss1ptnxe': {
       'es': 'Home',
       'en': '',
     },
@@ -322,11 +327,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Nueva Contraseña',
       'en': 'New Password',
     },
-    'r31x266o': {
+    'z6cfljwf': {
       'es': 'Iniciar sesión',
       'en': 'Recover Password',
     },
-    'mcdnh4we': {
+    'vjxa2za5': {
       'es': 'Home',
       'en': '',
     },
@@ -345,22 +350,33 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Enviar correo de recuperación',
       'en': 'Send recovery email ',
     },
-    'u8r9u9qo': {
+    'ymky6iep': {
       'es': 'Recuperar Contraseña',
       'en': 'Recover Password',
     },
-    'fvlx1po7': {
+    'iqu6hoyz': {
       'es': 'Home',
       'en': '',
     },
   },
   // ReservasReali
   {
-    '57qki5e2': {
+    'w67neuji': {
       'es': 'Reservas Realizadas',
       'en': 'Recover Password',
     },
-    'fwjb51ds': {
+    '4ddaxpxm': {
+      'es': 'Home',
+      'en': '',
+    },
+  },
+  // MisReservasPage
+  {
+    'w0ulhm7d': {
+      'es': 'Mis Reservas',
+      'en': 'Recover Password',
+    },
+    'ss1ptnxe': {
       'es': 'Home',
       'en': '',
     },

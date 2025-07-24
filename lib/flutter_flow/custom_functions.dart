@@ -10,15 +10,16 @@ import 'place.dart';
 import 'uploaded_file.dart';
 import '/backend/backend.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-
-DocumentReference parseUserDocument(String documentId) {
-  final documentReference =
-      FirebaseFirestore.instance.collection('users').doc(documentId);
-  return documentReference;
-}
+import '/auth/firebase_auth/auth_util.dart';
 
 String formatDate(DateTime value) {
   final DateFormat formatter = DateFormat('MM/dd/yyyy');
   final String formattedDate = formatter.format(value);
   return formattedDate;
+}
+
+DocumentReference parseUserDocument(String? documentId) {
+  final documentReference =
+      FirebaseFirestore.instance.collection('users').doc(documentId);
+  return documentReference;
 }
