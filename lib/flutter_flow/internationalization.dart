@@ -359,17 +359,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Home',
     },
   },
-  // ReservasReali
-  {
-    'w67neuji': {
-      'es': 'Reservas Realizadas',
-      'en': 'Reservations Made',
-    },
-    '4ddaxpxm': {
-      'es': 'Home',
-      'en': 'Home',
-    },
-  },
   // MisReservasPage
   {
     'w0ulhm7d': {

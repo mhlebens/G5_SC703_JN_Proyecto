@@ -75,14 +75,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? SignInWidget() : HomePageWidget(),
+      errorBuilder: (context, state) => appStateNotifier.loggedIn
+          ? ReservaCanchaPageWidget()
+          : SignupPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? SignInWidget() : HomePageWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? ReservaCanchaPageWidget()
+              : SignupPageWidget(),
         ),
         FFRoute(
           name: SignupPageWidget.routeName,
@@ -108,11 +110,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: ResetPasswordWidget.routeName,
           path: ResetPasswordWidget.routePath,
           builder: (context, params) => ResetPasswordWidget(),
-        ),
-        FFRoute(
-          name: ReservasRealiWidget.routeName,
-          path: ReservasRealiWidget.routePath,
-          builder: (context, params) => ReservasRealiWidget(),
         ),
         FFRoute(
           name: MisReservasPageWidget.routeName,
@@ -288,7 +285,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/homePage';
+            return '/signupPage';
           }
           return null;
         },
