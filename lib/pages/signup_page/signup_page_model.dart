@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
 import 'signup_page_widget.dart' show SignupPageWidget;
 import 'package:flutter/material.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class SignupPageModel extends FlutterFlowModel<SignupPageWidget> {
   ///  State fields for stateful widgets in this page.
@@ -19,6 +20,7 @@ class SignupPageModel extends FlutterFlowModel<SignupPageWidget> {
   // State field(s) for BirthdayInput widget.
   FocusNode? birthdayInputFocusNode;
   TextEditingController? birthdayInputTextController;
+  late MaskTextInputFormatter birthdayInputMask;
   String? Function(BuildContext, String?)? birthdayInputTextControllerValidator;
   // State field(s) for PasswordInput widget.
   FocusNode? passwordInputFocusNode;

@@ -7,6 +7,7 @@ import '/custom_code/actions/index.dart' as actions;
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'signup_page_model.dart';
 export 'signup_page_model.dart';
 
@@ -39,6 +40,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
     _model.birthdayInputTextController ??= TextEditingController();
     _model.birthdayInputFocusNode ??= FocusNode();
 
+    _model.birthdayInputMask = MaskTextInputFormatter(mask: '##/##/####');
     _model.passwordInputTextController ??= TextEditingController();
     _model.passwordInputFocusNode ??= FocusNode();
 
@@ -496,9 +498,11 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                         .bodyMedium
                                         .fontStyle,
                                   ),
+                          keyboardType: TextInputType.datetime,
                           cursorColor: FlutterFlowTheme.of(context).primaryText,
                           validator: _model.birthdayInputTextControllerValidator
                               .asValidator(context),
+                          inputFormatters: [_model.birthdayInputMask],
                         ),
                       ),
                     ),
@@ -829,27 +833,12 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                               nickname: _model.result?.nickname,
                             );
 
+                            context.goNamed(ReservaCanchaPageWidget.routeName);
+
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 content: Text(
                                   'Nueva cuenta creada en el sistema!',
-                                  style: TextStyle(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryText,
-                                  ),
-                                ),
-                                duration: Duration(milliseconds: 4000),
-                                backgroundColor:
-                                    FlutterFlowTheme.of(context).secondary,
-                              ),
-                            );
-
-                            context.goNamed(HomePageWidget.routeName);
-                          } else {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                content: Text(
-                                  'Ocurrió un error desconocido!',
                                   style: TextStyle(
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
